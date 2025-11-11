@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="google-site-verification" content="MnIOsvyyFH5OMJLCGrWectxcQ4ie24BkKLpuYlCHhgw" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador Contraseñas y Correos Temporales - Gratis</title>
+    <meta name="description" content="Generador online gratuito: contraseñas seguras y correos temporales. Crea cuentas desechables en segundos. Herramienta rápida y privada.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="contenedor">
+        <!-- CABECERA -->
+        <header>
+            <h1>🔐SecureGen</h1>
+            <p class="subtitulo">Contraseñas fuertes + Correos temporales</p>
+        </header>
+
+        <!-- SELECTOR DE TIPO -->
+        <div class="selector-tipo">
+            <button class="btn-tipo activo" data-tipo="password">🔐 Contraseña</button>
+            <button class="btn-tipo" data-tipo="email">📧 Correo Temporal</button>
+        </div>
+
+        <!-- SECCIÓN: GENERADOR DE CONTRASEÑAS -->
+        <section id="password" class="generador activo">
+            <h2>Generador de Contraseñas Seguras</h2>
+            <p class="descripcion">Crea contraseñas fuertes e imposibles de hackear.</p>
+            
+            <div class="opciones">
+                <label>
+                    <input type="checkbox" id="mayusculas" checked> Mayúsculas (A-Z)
+                </label>
+                <label>
+                    <input type="checkbox" id="minusculas" checked> Minúsculas (a-z)
+                </label>
+                <label>
+                    <input type="checkbox" id="numeros" checked> Números (0-9)
+                </label>
+                <label>
+                    <input type="checkbox" id="simbolos" checked> Símbolos (!@#$%)
+                </label>
+            </div>
+
+            <div class="longitud">
+                <label for="longitud-password">Longitud: <span id="valor-longitud">16</span> caracteres</label>
+                <input type="range" id="longitud-password" min="8" max="32" value="16">
+            </div>
+
+            <button class="btn-generar" onclick="generarPassword()">Generar Contraseña</button>
+            
+            <div class="resultado">
+                <input type="text" id="resultado-password" readonly placeholder="Tu contraseña aparecerá aquí">
+                <button class="btn-copiar" onclick="copiar('resultado-password')">📋 Copiar</button>
+            </div>
+
+            <div class="info-contraseña">
+                <p><strong>💡 Consejo:</strong> Una buena contraseña tiene al menos 12 caracteres, mayúsculas, minúsculas, números y símbolos. Ten esto en cuenta a la hora de generar una.</p>
+            </div>
+        </section>
+
+        <!-- SECCIÓN: GENERADOR DE CORREOS TEMPORALES -->
+        <section id="email" class="generador">
+            <h2>Correo Temporal Desechable</h2>
+            <p class="descripcion">Crea un correo temporal para registros sin exponer tu correo real.</p>
+
+            <div class="email-section">
+                <button class="btn-generar" onclick="generarEmail()">Generar Correo Temporal</button>
+
+                <div class="resultado">
+                    <input type="text" id="resultado-email" readonly placeholder="Tu correo aparecerá aquí">
+                    <button class="btn-copiar" onclick="copiar('resultado-email')">📋 Copiar</button>
+                </div>
+
+                <div id="bandeja-info" style="display: none; margin-top: 20px;">
+                    <h3>📬 Bandeja de Entrada</h3>
+                    <button class="btn-actualizar" onclick="actualizarBandeja()">🔄 Actualizar Bandeja</button>
+                    <div id="lista-emails" class="lista-emails">
+                        <p class="texto-vacio">Esperando correos...</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-email">
+                <p><strong>⚠️ Importante:</strong> Los correos temporales expiran después de 1 hora sin actividad. Úsalos solo para registros rápidos. Los datos son privados y no se guardan.</p>
+            </div>
+        </section>
+
+        <!-- PUBLICIDAD ADSENSE -->
+        <div class="publicidad-espacio">
+            <!-- Los anuncios de AdSense irán aquí después de aprobación -->
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Generador Seguro. Herramienta gratuita para contraseñas y correos temporales.</p>
+        <nav>
+            <a href="sobre-mi.html">Sobre Mí</a> | <a href="privacidad.html">Política de Privacidad</a>
+        </nav>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
