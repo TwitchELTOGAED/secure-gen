@@ -1,6 +1,6 @@
 # secure-gen
 
-Generador de Contraseñas Seguras y Correos Temporales
+Proyecto Personal. Generador de Contraseñas Seguras y Correos Temporales
 
 ---
 
